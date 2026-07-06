@@ -88,7 +88,11 @@ for (const blog of site.blogs) {
     render({ page: site.buildBlogArticlePage(blog), mode: 'app' }));
 }
 
-// 5. robots.txt + sitemap.xml
+// 5. data file the client app fetches for the blog index (/data/blogs.json)
+write(path.join('data', 'blogs.json'),
+  fs.readFileSync(path.join(ROOT, 'src', 'data', 'blogs.json'), 'utf8'));
+
+// 6. robots.txt + sitemap.xml
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${site.SITE_URL}/sitemap.xml\n`);
 write('sitemap.xml', site.generateSitemapXml());
 
