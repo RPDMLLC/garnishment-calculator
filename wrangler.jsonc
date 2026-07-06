@@ -1,10 +1,14 @@
 {
-  // Cloudflare Workers config — static site with pre-built assets
+  // Cloudflare Workers config — static site + one API route (Kit email signup)
   "name": "garnishment-calculator",
   "compatibility_date": "2026-07-01",
+  "main": "worker.js",
   "assets": {
     "directory": "./dist",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "404-page"
+  },
+  "vars": {
+    "KIT_TAG_ID": "19047553"
   }
 }
