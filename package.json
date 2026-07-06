@@ -1,0 +1,9 @@
+{
+  "name": "garnishment-calculator",
+  "version": "2.0.0",
+  "description": "GarnishmentCalculator.com - static site generator (zero dependencies)",
+  "private": true,
+  "scripts": {
+    "build": "node build.cjs"
+  }
+}
