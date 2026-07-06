@@ -117,7 +117,7 @@
         </svg>
         Contact Us
       </div>
-      <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Get in Touch</h1>
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Get in Touch</h2>
       <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">
         Have a question about wage garnishment laws, found an error in our content, or want to share feedback? We would love to hear from you. Our team typically responds within <strong class="text-slate-700">1&ndash;2 business days</strong>.
       </p>
@@ -141,7 +141,7 @@
             </div>
           </div>
 
-          <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+          <form id="contactForm" action="/api/contact" method="POST">
             <div class="space-y-5">
               <!-- Name -->
               <div>

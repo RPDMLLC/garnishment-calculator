@@ -9,6 +9,10 @@
     "not_found_handling": "404-page"
   },
   "vars": {
-    "KIT_TAG_ID": "19047553"
-  }
+    "KIT_TAG_ID": "19047553",
+    "CONTACT_DESTINATION": "rperez@digitalmillllc.com"
+  },
+  "send_email": [
+    { "name": "CONTACT_EMAIL", "destination_address": "rperez@digitalmillllc.com" }
+  ]
 }

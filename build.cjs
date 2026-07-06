@@ -52,6 +52,11 @@ function write(relPath, content) {
 }
 
 function render({ page, mode }) {
+  if (mode === 'calc') {
+    // static page + the standalone calculator widget (no React bundle)
+    return site.renderStaticTemplate(page)
+      .replace('</body>', '  <script src="/assets/calc.js" defer></script>\n  </body>');
+  }
   return mode === 'static' ? site.renderStaticTemplate(page) : site.renderTemplate(page);
 }
 
@@ -76,11 +81,16 @@ copyDir(PUBLIC, DIST);
 // 2. fixed pages
 for (const entry of PAGES) write(entry.file, render(entry));
 
-// 3. state calculator pages (50)
+// 3. state calculator pages (50) — served static with the clean calc widget
 for (const state of site.stateList) {
   write(`${state.slug}-wage-garnishment-calculator.html`,
-    render({ page: site.buildStatePage(state), mode: 'app' }));
+    render({ page: site.buildStatePage(state), mode: 'calc' }));
 }
+
+// 3b. calculator bundle: shared math + UI, one file, zero dependencies
+write(path.join('assets', 'calc.js'),
+  fs.readFileSync(path.join(ROOT, 'lib', 'garnish-math.cjs'), 'utf8') + '\n' +
+  fs.readFileSync(path.join(ROOT, 'lib', 'calc-ui.js'), 'utf8'));
 
 // 4. blog articles (85+) — 'app' mode matches production (client app handles article routes)
 for (const blog of site.blogs) {
