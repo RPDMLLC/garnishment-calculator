@@ -34,7 +34,7 @@ const PAGES = [
   { file: 'index.html',          page: site.buildHomePage(),       mode: 'app' },
   { file: 'states.html',         page: site.buildStatesPage(),     mode: 'app' },
   { file: 'about.html',          page: site.buildAboutPage(),      mode: 'app' },
-  { file: 'contact.html',        page: site.buildContactPage(),    mode: 'static' },
+  { file: 'contact.html',        page: site.buildContactPage(),    mode: 'turnstile' },
   { file: 'compare.html',        page: site.buildComparePage(),    mode: 'app' },
   { file: 'resources.html',      page: site.buildResourcesPage(),  mode: 'static' },
   { file: 'guide.html',          page: site.buildGuidePage(),      mode: 'static' },
@@ -52,6 +52,11 @@ function write(relPath, content) {
 }
 
 function render({ page, mode }) {
+  if (mode === 'turnstile') {
+    // static page + the Turnstile anti-spam widget loader
+    return site.renderStaticTemplate(page)
+      .replace('</body>', '  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>\n  </body>');
+  }
   if (mode === 'calc') {
     // static page + the standalone calculator widget (no React bundle)
     return site.renderStaticTemplate(page)
