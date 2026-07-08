@@ -29,10 +29,13 @@ export default {
 
     if (url.pathname === '/api/subscribe' && request.method === 'POST') {
       let email = '';
+      let honeypotted = false;
       try {
         const form = await request.formData();
+        honeypotted = String(form.get('company_website') || '').trim() !== '';
         email = String(form.get('email_address') || form.get('email') || '').trim().toLowerCase();
       } catch (err) { /* malformed body -> fall through to redirect */ }
+      if (honeypotted) return new Response(null, { status: 303, headers: { Location: `${url.origin}/guide` } });
 
       if (email && email.includes('@') && env.KIT_API_SECRET && env.KIT_TAG_ID) {
         try {
@@ -51,6 +54,10 @@ export default {
       let ok = false;
       try {
         const form = await request.formData();
+        // Honeypot: real users never see this field; bots fill it. Pretend success, send nothing.
+        if (String(form.get('company_website') || '').trim() !== '') {
+          return new Response('<!doctype html><p>Message sent.</p>', { status: 200, headers: { 'Content-Type': 'text/html' } });
+        }
         const name = String(form.get('name') || '').slice(0, 120);
         const email = String(form.get('email') || '').slice(0, 200);
         const subject = String(form.get('subject') || 'Contact form message').slice(0, 150);
