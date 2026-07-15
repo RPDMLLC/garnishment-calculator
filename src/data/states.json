@@ -1204,27 +1204,28 @@
   "name": "Washington",
   "abbreviation": "WA",
   "slug": "washington",
-  "consumerDebtPercent": 25,
+  "consumerDebtPercent": 20,
   "consumerDebtMinimumWageMultiplier": 35,
   "childSupportPercentCurrent": 50,
   "childSupportPercentSingle": 60,
   "childSupportArrearsExtra": 5,
   "studentLoanPercent": 15,
   "taxLevyNote": "Washington has no state income tax. Federal IRS levies use their own formula.",
-  "stateMinimumWage": 16.66,
+  "stateMinimumWage": 17.13,
   "usesStateMinWage": true,
   "headOfHouseholdProtection": false,
-  "specialNotes": "Washington protects 35 times the state minimum wage from garnishment. With Washington's $16.66/hr minimum wage, $583.10/week is protected. No state income tax.",
+  "specialNotes": "Washington protects 35 times the state minimum wage from garnishment. With Washington's $17.13/hr minimum wage, $583.10/week is protected. No state income tax.",
   "metaTitle": "Washington Wage Garnishment Calculator | WA Garnishment Laws & Limits",
   "metaDescription": "Calculate how much of your Washington paycheck can be legally garnished. WA protects 35x state minimum wage with no state income tax. Free calculator.",
-  "introContent": "Washington provides strong wage garnishment protections by protecting 35 times the state minimum wage from garnishment. With Washington's minimum wage at $16.66 per hour, this means $583.10 per week is protected — nearly triple the federal protection of $217.50. Washington also has no state income tax, which results in higher disposable earnings.",
+  "introContent": "Washington provides strong wage garnishment protections by protecting 35 times the state minimum wage from garnishment. With Washington's minimum wage at $17.13 per hour, this means $583.10 per week is protected — nearly triple the federal protection of $217.50. Washington also has no state income tax, which results in higher disposable earnings.",
   "keyProtections": [
    "35x state minimum wage protected ($583.10/week)",
    "No state income tax — higher disposable earnings",
    "Stronger protection than federal CCPA baseline",
    "Court judgment required for consumer debt garnishment"
   ],
-  "statuteReference": "Washington Revised Code §6.27.150"
+  "statuteReference": "RCW 6.27.150",
+  "consumerDebtLimitText": "20% of disposable earnings (80% exempt under RCW 6.27.150), or the amount above 35x the state minimum wage — whichever protects more"
  },
  "west-virginia": {
   "name": "West Virginia",
