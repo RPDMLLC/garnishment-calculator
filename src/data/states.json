@@ -273,15 +273,15 @@
     "stateMinimumWage": 14,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Hawaii follows federal CCPA limits but has specific procedures for garnishment. The first $100 per month of an individual's wages is exempt from garnishment.",
+    "specialNotes": "Hawaii applies a graduated monthly formula — 5% of the first $100, 10% of the next $100, and 20% of wages above $200 per month — or the federal CCPA limit, whichever garnishes less. This often protects more than the federal 25% cap.",
     "metaTitle": "Hawaii Wage Garnishment Calculator | HI Garnishment Laws & Limits",
-    "metaDescription": "Calculate how much of your Hawaii paycheck can be legally garnished. Free calculator covers child support, consumer debt, student loans, and tax levies under HI law.",
-    "introContent": "Hawaii follows federal wage garnishment limits under the Consumer Credit Protection Act, with some additional state-specific procedures. Hawaii law provides that the first $100 per month of wages is exempt from garnishment for consumer debts. The state also has specific requirements for how garnishment orders must be served on employers and the timeline for compliance.",
+    "metaDescription": "Calculate how much of your Hawaii paycheck can be legally garnished. HI uses a graduated 5/10/20% formula capped by federal law. Free calculator.",
+    "introContent": "Hawaii uses its own graduated formula for consumer-debt garnishment, applied to monthly wages: a creditor may take 5% of the first $100 of monthly wages, 10% of the next $100, and 20% of everything above $200 — but never more than the federal CCPA limit (25% of disposable earnings, with $217.50 per week protected). Because the graduated formula is usually the smaller amount, Hawaii often protects more than federal law. The estimate below shows the federal ceiling; your actual Hawaii garnishment is frequently lower. A court judgment is required first.",
     "keyProtections": [
-      "Federal CCPA limits apply for consumer debt",
-      "First $100/month of wages is exempt",
-      "Specific employer compliance timelines",
-      "Court judgment required for consumer debt garnishment"
+      "Graduated formula: 5% / 10% / 20% of monthly wage bands",
+      "Federal CCPA (25% / $217.50 per week) applies as a ceiling",
+      "Whichever result garnishes less is what applies",
+      "Court judgment required before garnishment"
     ],
     "statuteReference": "Hawaii Revised Statutes §652"
   },
@@ -377,14 +377,14 @@
     "stateMinimumWage": 7.25,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": true,
-    "specialNotes": "Iowa follows federal CCPA limits. The state requires that a minimum of $250/week (for single filers) or $400/week (for head of household) be exempt from garnishment.",
+    "specialNotes": "Iowa follows the federal weekly limit (25% of disposable, $217.50/week protected) but caps the total a creditor may garnish per calendar year by income tier — from $250/year (earning under $12,000) up to 10% of wages ($50,000+).",
     "metaTitle": "Iowa Wage Garnishment Calculator | IA Garnishment Laws & Limits",
-    "metaDescription": "Calculate how much of your Iowa paycheck can be legally garnished. IA provides minimum weekly exemptions. Free calculator for all garnishment types.",
-    "introContent": "Iowa follows federal wage garnishment limits under the CCPA but provides additional minimum exemptions. Iowa law ensures that at least $250 per week is exempt from garnishment for single filers, and $400 per week for head of household filers. These minimums can provide greater protection than the federal baseline for lower-income workers.",
+    "metaDescription": "Calculate how much of your Iowa paycheck can be legally garnished. IA caps the total garnished per year by income tier. Free calculator for all garnishment types.",
+    "introContent": "Iowa applies the federal weekly limits — a creditor may take up to 25% of disposable earnings, with $217.50 per week protected — but adds a powerful annual cap. The total a single creditor can garnish in one calendar year is limited by your expected annual earnings: $250 (earning under $12,000), $400 ($12,000–$16,000), $800 ($16,000–$24,000), $1,500 ($24,000–$35,000), $2,000 ($35,000–$50,000), and up to 10% of wages at $50,000 or more. The estimate below is the per-paycheck ceiling; the annual cap can lower the yearly total substantially. A court judgment is required first.",
     "keyProtections": [
-      "Federal CCPA limits apply as baseline",
-      "Minimum $250/week exempt for single filers",
-      "Minimum $400/week exempt for head of household",
+      "Federal weekly limit applies (25% of disposable / $217.50 per week)",
+      "Annual cap per creditor by income tier ($250/year up to 10% of wages)",
+      "Lower earners are strongly protected by the annual cap",
       "Court judgment required before garnishment"
     ],
     "statuteReference": "Iowa Code §642.21"
@@ -505,17 +505,17 @@
     "studentLoanPercent": 15,
     "taxLevyNote": "Maryland Comptroller can levy wages for state tax debts.",
     "stateMinimumWage": 15,
-    "usesStateMinWage": false,
+    "usesStateMinWage": true,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Maryland limits garnishment to 25% of disposable wages but also caps it at the amount exceeding $290.63/week (equivalent to 40x federal minimum wage). Caroline, Kent, Queen Anne's, and Worcester counties have a lower garnishment limit of 15%.",
+    "specialNotes": "Maryland exempts the greater of 75% of disposable earnings or 30 times the state minimum wage. At Maryland's $15.00/hr minimum wage, $450/week is protected, and no more than 25% of disposable earnings may be taken. Caroline, Kent, Queen Anne's, and Worcester counties instead follow the federal CCPA formula ($217.50/week floor).",
     "metaTitle": "Maryland Wage Garnishment Calculator | MD Garnishment Laws & Limits",
-    "metaDescription": "Calculate how much of your Maryland paycheck can be legally garnished. Some MD counties limit garnishment to 15%. Free calculator for all garnishment types.",
-    "introContent": "Maryland provides wage garnishment protections that vary by county. In most of the state, garnishment is limited to 25% of disposable wages. However, in Caroline, Kent, Queen Anne's, and Worcester counties, the limit is reduced to just 15% of disposable wages. Maryland also uses a higher weekly protection threshold than the federal minimum, providing additional protection for lower-income workers.",
+    "metaDescription": "Calculate how much of your Maryland paycheck can be legally garnished. MD protects the greater of 75% of disposable pay or $450/week. Free calculator.",
+    "introContent": "Maryland provides strong wage garnishment protections tied to the state minimum wage. In most of the state, a creditor may take no more than 25% of your disposable earnings, and your wages are exempt up to the greater of 75% of disposable earnings or 30 times the Maryland minimum wage per week. With Maryland's $15.00 minimum wage, that protects $450 per week. Four counties — Caroline, Kent, Queen Anne's, and Worcester — instead follow the federal formula (25% of disposable, or the amount above $217.50 per week, whichever is less). A court judgment is required before any consumer-debt garnishment.",
     "keyProtections": [
-      "25% limit in most counties, 15% in Caroline, Kent, Queen Anne's, and Worcester",
-      "Higher weekly protection threshold than federal baseline",
-      "Court judgment required before garnishment",
-      "Specific exemption procedures available"
+      "Greater of 75% of disposable or 30x state minimum wage protected ($450/week)",
+      "No more than 25% of disposable earnings may be garnished",
+      "Caroline, Kent, Queen Anne's, and Worcester counties follow the federal $217.50/week floor",
+      "Court judgment required before garnishment"
     ],
     "statuteReference": "Maryland Code, Commercial Law §15-601.1"
   },
@@ -899,15 +899,15 @@
     "stateMinimumWage": 10.45,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Ohio follows federal CCPA limits. The state requires a minimum of $425.00/week to be exempt from garnishment for personal earnings.",
+    "specialNotes": "Ohio follows the federal CCPA limits: the lesser of 25% of disposable earnings or the amount above $217.50 per week (30 times the federal minimum wage). A court judgment is required first.",
     "metaTitle": "Ohio Wage Garnishment Calculator | OH Garnishment Laws & Limits",
-    "metaDescription": "Calculate how much of your Ohio paycheck can be legally garnished. OH protects a minimum of $425/week. Free calculator for all garnishment types.",
-    "introContent": "Ohio follows federal wage garnishment limits under the Consumer Credit Protection Act but provides an additional minimum exemption. Ohio law requires that at least $425.00 per week of personal earnings be exempt from garnishment, which is nearly double the federal protection of $217.50 per week. This provides significant additional protection for Ohio workers.",
+    "metaDescription": "Calculate how much of your Ohio paycheck can be legally garnished. OH follows the federal 25% / $217.50-per-week limit. Free calculator for all garnishment types.",
+    "introContent": "Ohio follows the federal wage garnishment limits under the Consumer Credit Protection Act. A creditor may take the lesser of 25% of your disposable earnings or the amount by which your weekly disposable earnings exceed 30 times the federal minimum wage — a floor of $217.50 per week. A court judgment is required before any consumer-debt garnishment can begin.",
     "keyProtections": [
-      "Minimum $425/week exempt from garnishment",
-      "Nearly double the federal protection",
-      "25% of disposable earnings maximum for consumer debt",
-      "Court judgment required before garnishment"
+      "Lesser of 25% of disposable or the amount above $217.50/week",
+      "Follows the federal CCPA formula",
+      "Court judgment required before garnishment",
+      "Statutory exemptions may further reduce what is collectible"
     ],
     "statuteReference": "Ohio Revised Code §2329.66"
   },
@@ -951,17 +951,18 @@
     "stateMinimumWage": 14.7,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Oregon limits garnishment to the lesser of 25% of disposable earnings or the amount exceeding $254/week. Oregon also has a $7,500 annual exemption for wages.",
+    "specialNotes": "Oregon exempts 75% of disposable earnings plus a rising weekly minimum — $400/week for wages paid on or after July 1, 2026. Garnishment is capped at the lesser of 25% of disposable earnings or the amount above that weekly minimum.",
     "metaTitle": "Oregon Wage Garnishment Calculator | OR Garnishment Laws & Limits",
-    "metaDescription": "Calculate how much of your Oregon paycheck can be legally garnished. OR provides additional wage exemptions. Free calculator for all garnishment types.",
-    "introContent": "Oregon provides wage garnishment protections that follow the federal CCPA framework with some additional state-specific protections. The state limits garnishment to the lesser of 25% of disposable earnings or the amount exceeding $254 per week. Oregon also provides a $7,500 annual exemption for wages, offering additional protection for workers.",
+    "metaDescription": "Calculate how much of your Oregon paycheck can be legally garnished. OR exempts $400/week (2026) plus 75% of disposable pay. Free calculator.",
+    "introContent": "Oregon protects 75% of your disposable earnings and sets a rising weekly minimum that stays exempt no matter what. For wages paid on or after July 1, 2026, at least $400 per week is exempt (up from $338 the year before). A creditor may take only the lesser of 25% of disposable earnings or the amount above that weekly minimum, and a court judgment is required first.",
     "keyProtections": [
-      "25% of disposable earnings or amount exceeding $254/week",
-      "$7,500 annual wage exemption",
-      "Court judgment required before garnishment",
-      "Specific procedures for continuing garnishment"
+      "75% of disposable earnings exempt",
+      "Weekly minimum exemption of $400 (as of July 1, 2026)",
+      "Lesser of 25% of disposable or the amount above the weekly minimum",
+      "Court judgment required before garnishment"
     ],
-    "statuteReference": "Oregon Revised Statutes §18.385"
+    "statuteReference": "Oregon Revised Statutes §18.385",
+    "weeklyFloorOverride": 400
   },
   "pennsylvania": {
     "name": "Pennsylvania",

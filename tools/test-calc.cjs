@@ -34,8 +34,19 @@ expect('Low income fully protected (AL $250/wk)', GCMath.calculate(S('alabama'),
 expect('CA consumer $2000 biweekly (40x state wage)', GCMath.calculate(S('california'), { ...base, type: 'consumer' }).max,
   Math.max(0, Math.min(0.25 * 1500, 1500 - 40 * states['california'].stateMinimumWage * 2)));
 expect('PA consumer (prohibited)', GCMath.calculate(S('pennsylvania'), { ...base, type: 'consumer' }).max, 0);
-expect('MA consumer (15% gross vs 50x fed)', GCMath.calculate(S('massachusetts'), { ...base, type: 'consumer' }).max,
-  Math.max(0, Math.min(0.15 * 2000, 1500 - 50 * 7.25 * 2)));
+// MA c.246 §28: floor is 50x the GREATER of federal or MA min wage ($15) = $750/wk.
+// At $2000 biweekly, disposable $1500 = 50x$15x2 exactly, so nothing is garnishable.
+expect('MA consumer (15% gross vs 50x $15 state min - corrected)', GCMath.calculate(S('massachusetts'), { ...base, type: 'consumer' }).max,
+  Math.max(0, Math.min(0.15 * 2000, 1500 - 50 * 15 * 2)));
+// MD Comm. Law §15-601.1: exempt = greater of 75% disposable or 30x state min wage ($15) = $450/wk
+expect('MD consumer (30x $15 state min floor - corrected)', GCMath.calculate(S('maryland'), { ...base, type: 'consumer' }).max,
+  Math.max(0, Math.min(0.25 * 1500, 1500 - 30 * 15 * 2)));
+// OH follows federal CCPA ($217.50/wk floor) — no special $425 floor
+expect('OH consumer (federal 25% / $217.50 - corrected)', GCMath.calculate(S('ohio'), { ...base, type: 'consumer' }).max,
+  Math.max(0, Math.min(0.25 * 1500, 1500 - 30 * 7.25 * 2)));
+// OR ORS 18.385: flat statutory weekly floor $400 (as of 2026-07-01)
+expect('OR consumer (flat $400/wk statutory floor - corrected)', GCMath.calculate(S('oregon'), { ...base, type: 'consumer' }).max,
+  Math.max(0, Math.min(0.25 * 1500, 1500 - 400 * 2)));
 
 // Sanity: run every state, ensure no NaN / negative / over-disposable
 let stateSweep = 0;
