@@ -35,7 +35,7 @@ const PAGES = [
   { file: 'states.html',         page: site.buildStatesPage(),     mode: 'app' },
   { file: 'about.html',          page: site.buildAboutPage(),      mode: 'app' },
   { file: 'contact.html',        page: site.buildContactPage(),    mode: 'turnstile' },
-  { file: 'compare.html',        page: site.buildComparePage(),    mode: 'app' },
+  { file: 'compare.html',        page: site.buildComparePage(),    mode: 'compare' },
   { file: 'resources.html',      page: site.buildResourcesPage(),  mode: 'static' },
   { file: 'guide.html',          page: site.buildGuidePage(),      mode: 'static' },
   { file: 'disclosure.html',     page: site.buildDisclosurePage(), mode: 'static' },
@@ -61,6 +61,11 @@ function render({ page, mode }) {
     // static page + the standalone calculator widget (no React bundle)
     return site.renderStaticTemplate(page)
       .replace('</body>', '  <script src="/assets/calc.js" defer></script>\n  </body>');
+  }
+  if (mode === 'compare') {
+    // static page + the standalone compare-table sorter (no React bundle)
+    return site.renderStaticTemplate(page)
+      .replace('</body>', '  <script src="/assets/compare.js" defer></script>\n  </body>');
   }
   return mode === 'static' ? site.renderStaticTemplate(page) : site.renderTemplate(page);
 }
@@ -96,6 +101,10 @@ for (const state of site.stateList) {
 write(path.join('assets', 'calc.js'),
   fs.readFileSync(path.join(ROOT, 'lib', 'garnish-math.cjs'), 'utf8') + '\n' +
   fs.readFileSync(path.join(ROOT, 'lib', 'calc-ui.js'), 'utf8'));
+
+// 3c. compare-table sorter (progressive enhancement)
+write(path.join('assets', 'compare.js'),
+  fs.readFileSync(path.join(ROOT, 'lib', 'compare-ui.js'), 'utf8'));
 
 // 4. blog articles (85+) — 'app' mode matches production (client app handles article routes)
 for (const blog of site.blogs) {
