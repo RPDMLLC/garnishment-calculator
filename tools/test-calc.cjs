@@ -22,6 +22,14 @@ expect('FL consumer', GCMath.calculate(S('florida'), { ...base, type: 'consumer'
 expect('TX consumer (prohibited)', GCMath.calculate(S('texas'), { ...base, type: 'consumer' }).max, 0);
 expect('FL child support (supporting other family)', GCMath.calculate(S('florida'), { ...base, type: 'child_support', supportsOtherFamily: true }).max, 750);
 expect('FL student loans', GCMath.calculate(S('florida'), { ...base, type: 'student_loans' }).max, 225);
+// 34 CFR 34.19: AWG is the LESSER of 15% of disposable or the amount above 30x fed min
+// wage/week ($217.50). Without the floor the lib overstated for low earners.
+expect('Student loans low earner $300/wk (30x floor binds, not 15%)',
+  GCMath.calculate(S('florida'), { gross: 300, frequency: 'weekly', type: 'student_loans' }).max, 7.5);
+expect('Student loans fully protected below floor ($250/wk)',
+  GCMath.calculate(S('florida'), { gross: 250, frequency: 'weekly', type: 'student_loans' }).max, 0);
+expect('Student loans in a prohibition state still apply (TX, federal overrides)',
+  GCMath.calculate(S('texas'), { ...base, type: 'student_loans' }).max, 225);
 expect('FL tax levy estimate', GCMath.calculate(S('florida'), { ...base, type: 'tax_levy' }).max, 300);
 
 // Documented legal corrections (old calc was wrong)
