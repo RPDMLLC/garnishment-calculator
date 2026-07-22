@@ -38,6 +38,12 @@ expect('IL consumer (15% gross vs 45x floor - corrected)', GCMath.calculate(S('i
 
 // Additional coverage
 expect('FL child support (not supporting, in arrears = 65%)', GCMath.calculate(S('florida'), { ...base, type: 'child_support', supportsOtherFamily: false, inArrears: true }).max, 975);
+// TX Fam. Code §158.009 caps child-support withholding at 50% of disposable, flat —
+// even for arrears, where the federal CCPA would otherwise allow 65%.
+expect('TX child support (single + arrears, capped at 50% not 65%)',
+  GCMath.calculate(S('texas'), { ...base, type: 'child_support', supportsOtherFamily: false, inArrears: true }).max, 750);
+expect('TX child support (supporting, current, 50%)',
+  GCMath.calculate(S('texas'), { ...base, type: 'child_support', supportsOtherFamily: true, inArrears: false }).max, 750);
 expect('Low income fully protected (AL $250/wk)', GCMath.calculate(S('alabama'), { gross: 250, frequency: 'weekly', type: 'consumer' }).max, 0);
 expect('CA consumer $2000 biweekly (40x state wage)', GCMath.calculate(S('california'), { ...base, type: 'consumer' }).max,
   Math.max(0, Math.min(0.25 * 1500, 1500 - 40 * states['california'].stateMinimumWage * 2)));

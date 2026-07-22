@@ -1110,18 +1110,20 @@
     "stateMinimumWage": 7.25,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Texas does NOT allow wage garnishment for consumer debts. Wages can only be garnished for child support, taxes, student loans, and court-ordered spousal maintenance. Texas also has no state income tax.",
+    "specialNotes": "Texas does NOT allow wage garnishment for consumer debts. Wages can only be garnished for child support, taxes, student loans, and court-ordered spousal maintenance. Texas also has no state income tax. For child support, Texas caps withholding at 50% of disposable earnings (Fam. Code §158.009) — even for arrears, lower than the federal maximum.",
     "metaTitle": "Texas Wage Garnishment Calculator | TX Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Texas paycheck can be legally garnished. TX prohibits garnishment for consumer debts. Free calculator for child support, taxes & more.",
     "introContent": "Texas is one of the most protective states in the nation when it comes to wage garnishment. The Texas Constitution and state law completely prohibit wage garnishment for consumer debts, including credit card debt, medical bills, and personal loans. Wages can only be garnished in Texas for child support, spousal maintenance, federal and state taxes, and federal student loans. Combined with no state income tax, Texas provides exceptional protection for workers' wages.",
     "keyProtections": [
       "No wage garnishment allowed for consumer debts (Texas Constitution)",
       "Only child support, spousal maintenance, taxes, and student loans can trigger garnishment",
+      "Child support withholding capped at 50% of disposable earnings (Fam. Code §158.009)",
       "No state income tax",
       "One of the most protective states in the nation"
     ],
     "statuteReference": "Texas Constitution Article XVI, §28; Texas Property Code §42.001",
-    "consumerDebtLimitText": "Wage garnishment for consumer debts is prohibited under the Texas Constitution"
+    "consumerDebtLimitText": "Wage garnishment for consumer debts is prohibited under the Texas Constitution",
+    "childSupportMaxPercent": 50
   },
   "utah": {
     "name": "Utah",
