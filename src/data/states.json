@@ -65,7 +65,7 @@
     "stateMinimumWage": 14.35,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Arizona follows federal CCPA limits for consumer debt garnishment. The state has specific procedures for garnishment writs that must be followed by employers.",
+    "specialNotes": "Arizona follows federal CCPA limits for consumer debt garnishment. The state has specific procedures for garnishment writs that must be followed by employers. For child support, Arizona caps wage withholding at 50% of disposable earnings (A.R.S. §25-505.01) — more protective than the federal maximum of up to 65%.",
     "metaTitle": "Arizona Wage Garnishment Calculator | AZ Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Arizona paycheck can be legally garnished. Free calculator covers child support, consumer debt, student loans, and tax levies under AZ law.",
     "introContent": "Arizona follows the federal Consumer Credit Protection Act for wage garnishment limits on consumer debts. Creditors must obtain a court judgment before garnishing wages in Arizona, and the garnishment is limited to 25% of disposable earnings or the amount exceeding 30 times the federal minimum wage. Arizona's garnishment procedures require specific court filings and employer compliance timelines.",
@@ -73,9 +73,11 @@
       "Federal CCPA limits apply for consumer debt",
       "Creditors must obtain a court judgment before garnishing wages",
       "Employers must respond to garnishment writs within 10 business days",
-      "Certain income sources like Social Security are exempt"
+      "Certain income sources like Social Security are exempt",
+      "Child support withholding capped at 50% of disposable earnings (A.R.S. §25-505.01)"
     ],
-    "statuteReference": "Arizona Revised Statutes §12-1598"
+    "statuteReference": "Arizona Revised Statutes §12-1598",
+    "childSupportMaxPercent": 50
   },
   "arkansas": {
     "name": "Arkansas",
@@ -299,7 +301,7 @@
     "stateMinimumWage": 7.25,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Idaho follows federal CCPA limits for wage garnishment. The state does not provide additional protections beyond federal law.",
+    "specialNotes": "Idaho follows federal CCPA limits for wage garnishment. The state does not provide additional protections beyond federal law. For child support, Idaho caps wage withholding at 50% of disposable earnings (Idaho Code §32-1210) — more protective than the federal maximum of up to 65%.",
     "metaTitle": "Idaho Wage Garnishment Calculator | ID Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Idaho paycheck can be legally garnished. Free calculator covers child support, consumer debt, student loans, and tax levies under ID law.",
     "introContent": "Idaho follows the federal Consumer Credit Protection Act for wage garnishment limits. Up to 25% of your disposable earnings can be garnished for consumer debts, or the amount exceeding 30 times the federal minimum wage, whichever is less. Idaho does not provide additional state-level protections beyond the federal baseline.",
@@ -307,9 +309,11 @@
       "Federal CCPA limits apply: 25% of disposable earnings",
       "30x federal minimum wage ($217.50/week) protected",
       "Garnishment continues until debt is paid or order expires",
-      "Certain income sources are exempt from garnishment"
+      "Certain income sources are exempt from garnishment",
+      "Child support withholding capped at 50% of disposable earnings (Idaho Code §32-1210)"
     ],
-    "statuteReference": "Idaho Code §11-717"
+    "statuteReference": "Idaho Code §11-717",
+    "childSupportMaxPercent": 50
   },
   "illinois": {
     "name": "Illinois",
@@ -455,7 +459,7 @@
     "stateMinimumWage": 7.25,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Louisiana follows federal CCPA limits. The state does not provide additional protections beyond federal law for consumer debt garnishment.",
+    "specialNotes": "Louisiana follows federal CCPA limits. The state does not provide additional protections beyond federal law for consumer debt garnishment. For child support, Louisiana caps wage withholding at 50% of disposable earnings (La. R.S. 46:236.3) — more protective than the federal maximum of up to 65%.",
     "metaTitle": "Louisiana Wage Garnishment Calculator | LA Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Louisiana paycheck can be legally garnished. Free calculator covers child support, consumer debt, student loans, and tax levies under LA law.",
     "introContent": "Louisiana follows the federal Consumer Credit Protection Act for wage garnishment limits. Up to 25% of disposable earnings can be garnished for consumer debts, or the amount exceeding 30 times the federal minimum wage, whichever is less. Louisiana does not provide additional state-level protections beyond the federal baseline for consumer debt garnishment.",
@@ -463,9 +467,11 @@
       "Federal CCPA limits apply: 25% of disposable earnings",
       "30x federal minimum wage ($217.50/week) protected",
       "Court judgment required for consumer debt garnishment",
-      "Specific procedures for garnishment in Louisiana civil code"
+      "Specific procedures for garnishment in Louisiana civil code",
+      "Child support withholding capped at 50% of disposable earnings (La. R.S. 46:236.3)"
     ],
-    "statuteReference": "Louisiana Code of Civil Procedure Art. 2411"
+    "statuteReference": "Louisiana Code of Civil Procedure Art. 2411",
+    "childSupportMaxPercent": 50
   },
   "maine": {
     "name": "Maine",
@@ -559,7 +565,7 @@
     "stateMinimumWage": 10.56,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Michigan follows federal CCPA limits for wage garnishment. The state does not provide additional protections beyond federal law.",
+    "specialNotes": "Michigan follows federal CCPA limits for wage garnishment. The state does not provide additional protections beyond federal law. For child support, Michigan caps wage withholding at 50% of disposable earnings (MCL 552.608) — more protective than the federal maximum of up to 65%.",
     "metaTitle": "Michigan Wage Garnishment Calculator | MI Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Michigan paycheck can be legally garnished. Free calculator covers child support, consumer debt, student loans, and tax levies under MI law.",
     "introContent": "Michigan follows the federal Consumer Credit Protection Act for wage garnishment limits. Creditors can garnish up to 25% of your disposable earnings or the amount by which your weekly disposable earnings exceed 30 times the federal minimum wage, whichever is less. Michigan requires creditors to obtain a court judgment before garnishing wages.",
@@ -567,9 +573,11 @@
       "Federal CCPA limits apply: 25% of disposable earnings",
       "30x federal minimum wage ($217.50/week) protected",
       "Court judgment required before garnishment",
-      "Garnishment installment payments available"
+      "Garnishment installment payments available",
+      "Child support withholding capped at 50% of disposable earnings (MCL 552.608)"
     ],
-    "statuteReference": "Michigan Compiled Laws §600.4012"
+    "statuteReference": "Michigan Compiled Laws §600.4012",
+    "childSupportMaxPercent": 50
   },
   "minnesota": {
     "name": "Minnesota",
@@ -793,7 +801,7 @@
     "stateMinimumWage": 12.0,
     "usesStateMinWage": true,
     "headOfHouseholdProtection": false,
-    "specialNotes": "New Mexico protects 40 times the state minimum wage from garnishment, providing stronger protection than federal law.",
+    "specialNotes": "New Mexico protects 40 times the state minimum wage from garnishment, providing stronger protection than federal law. For child support, New Mexico caps wage withholding at 50% of disposable earnings (NMSA §40-4A-4.1) — more protective than the federal maximum of up to 65%.",
     "metaTitle": "New Mexico Wage Garnishment Calculator | NM Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your New Mexico paycheck can be legally garnished. NM protects 40x state minimum wage. Free calculator for all garnishment types.",
     "introContent": "New Mexico provides enhanced wage garnishment protections compared to federal law. The state protects 40 times the New Mexico minimum wage from garnishment. With the state minimum wage at $12.00 per hour, this means $480 per week is protected — more than double the federal protection of $217.50 per week.",
@@ -801,9 +809,11 @@
       "40x state minimum wage protected ($480/week)",
       "Stronger protection than federal CCPA baseline",
       "Court judgment required for consumer debt garnishment",
-      "Specific exemption procedures available"
+      "Specific exemption procedures available",
+      "Child support withholding capped at 50% of disposable earnings (NMSA §40-4A-4.1)"
     ],
-    "statuteReference": "New Mexico Statutes §35-12-7"
+    "statuteReference": "New Mexico Statutes §35-12-7",
+    "childSupportMaxPercent": 50
   },
   "new-york": {
     "name": "New York",
@@ -846,7 +856,7 @@
     "stateMinimumWage": 7.25,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "North Carolina generally does not allow wage garnishment for consumer debts. Wages can only be garnished for child support, taxes, and student loans. This makes NC one of the most protective states.",
+    "specialNotes": "North Carolina generally does not allow wage garnishment for consumer debts. Wages can only be garnished for child support, taxes, and student loans. This makes NC one of the most protective states. For child support, North Carolina caps withholding at 40% of disposable earnings when there is a single order (N.C.G.S. §110-136.6), rising to 45–50% only with multiple orders — below the federal maximum.",
     "metaTitle": "North Carolina Wage Garnishment Calculator | NC Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your North Carolina paycheck can be legally garnished. NC generally prohibits garnishment for consumer debts. Free calculator.",
     "introContent": "North Carolina is one of the most protective states in the nation when it comes to wage garnishment. The state generally prohibits wage garnishment for consumer debts such as credit card debt, medical bills, and personal loans. Wages can only be garnished in North Carolina for child support, federal and state taxes, and federal student loans. This makes North Carolina an exceptionally favorable state for workers facing consumer debt issues.",
@@ -854,10 +864,12 @@
       "No wage garnishment allowed for consumer debts",
       "Only child support, taxes, and student loans can trigger garnishment",
       "One of the most protective states in the nation",
-      "Bank accounts may still be subject to levy for consumer debts"
+      "Bank accounts may still be subject to levy for consumer debts",
+      "Child support withholding capped at 40% for a single order (up to 50% for multiple), below the federal ceiling"
     ],
     "statuteReference": "North Carolina General Statutes §1-362",
-    "consumerDebtLimitText": "Wage garnishment for consumer debts is generally prohibited under North Carolina law"
+    "consumerDebtLimitText": "Wage garnishment for consumer debts is generally prohibited under North Carolina law",
+    "childSupportMaxPercent": 50
   },
   "north-dakota": {
     "name": "North Dakota",
@@ -951,7 +963,7 @@
     "stateMinimumWage": 14.7,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Oregon exempts 75% of disposable earnings plus a rising weekly minimum — $400/week for wages paid on or after July 1, 2026. Garnishment is capped at the lesser of 25% of disposable earnings or the amount above that weekly minimum.",
+    "specialNotes": "Oregon exempts 75% of disposable earnings plus a rising weekly minimum — $400/week for wages paid on or after July 1, 2026. Garnishment is capped at the lesser of 25% of disposable earnings or the amount above that weekly minimum. For child support, Oregon caps wage withholding at 50% of disposable earnings (ORS 25.414) — more protective than the federal maximum of up to 65%.",
     "metaTitle": "Oregon Wage Garnishment Calculator | OR Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Oregon paycheck can be legally garnished. OR exempts $400/week (2026) plus 75% of disposable pay. Free calculator.",
     "introContent": "Oregon protects 75% of your disposable earnings and sets a rising weekly minimum that stays exempt no matter what. For wages paid on or after July 1, 2026, at least $400 per week is exempt (up from $338 the year before). A creditor may take only the lesser of 25% of disposable earnings or the amount above that weekly minimum, and a court judgment is required first.",
@@ -959,10 +971,12 @@
       "75% of disposable earnings exempt",
       "Weekly minimum exemption of $400 (as of July 1, 2026)",
       "Lesser of 25% of disposable or the amount above the weekly minimum",
-      "Court judgment required before garnishment"
+      "Court judgment required before garnishment",
+      "Child support withholding capped at 50% of disposable earnings (ORS 25.414)"
     ],
     "statuteReference": "Oregon Revised Statutes §18.385",
-    "weeklyFloorOverride": 400
+    "weeklyFloorOverride": 400,
+    "childSupportMaxPercent": 50
   },
   "pennsylvania": {
     "name": "Pennsylvania",
@@ -1084,7 +1098,7 @@
     "stateMinimumWage": 7.25,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Tennessee follows federal CCPA limits. The state has no income tax on wages. Tennessee provides a minimum exemption of $217.50/week.",
+    "specialNotes": "Tennessee follows federal CCPA limits. The state has no income tax on wages. Tennessee provides a minimum exemption of $217.50/week. For child support, Tennessee caps wage withholding at 50% of disposable earnings (Tenn. Code §36-5-501) — more protective than the federal maximum of up to 65%.",
     "metaTitle": "Tennessee Wage Garnishment Calculator | TN Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Tennessee paycheck can be legally garnished. TN has no state income tax. Free calculator for all garnishment types.",
     "introContent": "Tennessee follows the federal Consumer Credit Protection Act for wage garnishment limits. The state has no income tax on wages, which can result in higher disposable earnings. Creditors can garnish up to 25% of disposable earnings or the amount exceeding 30 times the federal minimum wage, whichever is less.",
@@ -1092,9 +1106,11 @@
       "Federal CCPA limits apply: 25% of disposable earnings",
       "No state income tax on wages",
       "30x federal minimum wage ($217.50/week) protected",
-      "Court judgment required before garnishment"
+      "Court judgment required before garnishment",
+      "Child support withholding capped at 50% of disposable earnings (Tenn. Code §36-5-501)"
     ],
-    "statuteReference": "Tennessee Code §26-2-106"
+    "statuteReference": "Tennessee Code §26-2-106",
+    "childSupportMaxPercent": 50
   },
   "texas": {
     "name": "Texas",
@@ -1217,7 +1233,7 @@
     "stateMinimumWage": 17.13,
     "usesStateMinWage": true,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Washington protects 35 times the state minimum wage from garnishment. With Washington's $17.13/hr minimum wage, $599.55/week is protected. No state income tax.",
+    "specialNotes": "Washington protects 35 times the state minimum wage from garnishment. With Washington's $17.13/hr minimum wage, $599.55/week is protected. No state income tax. For child support, Washington caps wage withholding at 50% of disposable earnings (RCW 26.23.060) — more protective than the federal maximum of up to 65%.",
     "metaTitle": "Washington Wage Garnishment Calculator | WA Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Washington paycheck can be legally garnished. WA protects 35x state minimum wage with no state income tax. Free calculator.",
     "introContent": "Washington provides strong wage garnishment protections by protecting 35 times the state minimum wage from garnishment. With Washington's minimum wage at $17.13 per hour, this means $599.55 per week is protected — nearly triple the federal protection of $217.50. Washington also has no state income tax, which results in higher disposable earnings.",
@@ -1225,10 +1241,12 @@
       "35x state minimum wage protected ($599.55/week)",
       "No state income tax — higher disposable earnings",
       "Stronger protection than federal CCPA baseline",
-      "Court judgment required for consumer debt garnishment"
+      "Court judgment required for consumer debt garnishment",
+      "Child support withholding capped at 50% of disposable earnings (RCW 26.23.060)"
     ],
     "statuteReference": "RCW 6.27.150",
-    "consumerDebtLimitText": "20% of disposable earnings (80% exempt under RCW 6.27.150), or the amount above 35x the state minimum wage — whichever protects more"
+    "consumerDebtLimitText": "20% of disposable earnings (80% exempt under RCW 6.27.150), or the amount above 35x the state minimum wage — whichever protects more",
+    "childSupportMaxPercent": 50
   },
   "west-virginia": {
     "name": "West Virginia",

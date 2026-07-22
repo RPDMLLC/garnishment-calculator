@@ -44,6 +44,15 @@ expect('TX child support (single + arrears, capped at 50% not 65%)',
   GCMath.calculate(S('texas'), { ...base, type: 'child_support', supportsOtherFamily: false, inArrears: true }).max, 750);
 expect('TX child support (supporting, current, 50%)',
   GCMath.calculate(S('texas'), { ...base, type: 'child_support', supportsOtherFamily: true, inArrears: false }).max, 750);
+// Other 50%-flat child-support states (verified against statute July 22): the worst
+// case (single, arrears) that would be 65% federally is capped at 50% = $750.
+['arizona','idaho','michigan','oregon','washington','tennessee','louisiana','new-mexico','north-carolina'].forEach(function (sl) {
+  expect(sl + ' child support (single+arrears capped at 50%)',
+    GCMath.calculate(S(sl), { ...base, type: 'child_support', supportsOtherFamily: false, inArrears: true }).max, 750);
+});
+// California was NOT a deviation — it follows the federal tiers (single+arrears = 65%)
+expect('CA child support follows federal (single+arrears = 65%)',
+  GCMath.calculate(S('california'), { ...base, type: 'child_support', supportsOtherFamily: false, inArrears: true }).max, 975);
 expect('Low income fully protected (AL $250/wk)', GCMath.calculate(S('alabama'), { gross: 250, frequency: 'weekly', type: 'consumer' }).max, 0);
 expect('CA consumer $2000 biweekly (40x state wage)', GCMath.calculate(S('california'), { ...base, type: 'consumer' }).max,
   Math.max(0, Math.min(0.25 * 1500, 1500 - 40 * states['california'].stateMinimumWage * 2)));
