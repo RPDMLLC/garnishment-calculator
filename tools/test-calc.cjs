@@ -91,5 +91,21 @@ for (const slug of Object.keys(states)) {
   }
 }
 console.log(`  PASS state sweep: ${stateSweep} combinations, all sane`);
+
+// Golden-snapshot regression guard: every state x type x income value must still match
+// the verified baseline. Catches any formula change that silently alters a state.
+const snapshot = require('./snapshot.cjs');
+const snap = snapshot.check();
+if (snap.missing) {
+  fail++; console.log('  FAIL snapshot: no golden-snapshot.json (run: node tools/snapshot.cjs --update)');
+} else if (snap.mismatches.length) {
+  fail += snap.mismatches.length;
+  console.log(`  FAIL snapshot: ${snap.mismatches.length} of ${snap.checked} values drifted:`);
+  for (const m of snap.mismatches.slice(0, 15)) console.log(`    ${m.key}  expected ${m.expected}  got ${m.got}`);
+  console.log('    If intentional and verified, run: node tools/snapshot.cjs --update');
+} else {
+  console.log(`  PASS golden snapshot: ${snap.checked} state/type/income values match verified baseline`);
+}
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
