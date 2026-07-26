@@ -119,17 +119,18 @@
     "stateMinimumWage": 16.9,
     "usesStateMinWage": true,
     "headOfHouseholdProtection": false,
-    "specialNotes": "California provides stronger protections than federal law. The state protects 40 times the state minimum wage (not federal), which is significantly more protective given California's $16.90/hr minimum wage. This means $676/week is protected in California vs. $217.50 under federal law.",
+    "specialNotes": "California significantly restricts wage garnishment under CCP §706.050 (as amended by SB 1477). A creditor may take only the lesser of 20% of disposable earnings or 40% of the amount by which weekly disposable earnings exceed 48 times the state minimum wage. At California's $16.90/hr minimum wage, the first $811.20/week of disposable earnings is fully protected, and many workers owe nothing. A higher local minimum wage, where it applies, protects even more.",
     "metaTitle": "California Wage Garnishment Calculator | CA Garnishment Laws & Limits",
-    "metaDescription": "Calculate how much of your California paycheck can be legally garnished. CA law protects more of your income than federal law. Free calculator for all garnishment types.",
-    "introContent": "California provides significantly stronger wage garnishment protections than federal law. While federal law protects earnings up to 30 times the federal minimum wage ($217.50/week), California protects earnings up to 40 times the California state minimum wage ($16.90/hr), meaning $676 per week is shielded from garnishment. This makes California one of the most protective states in the nation for wage earners facing garnishment.",
+    "metaDescription": "Calculate how much of your California paycheck can be legally garnished. Under SB 1477, CA protects far more than federal law. Free calculator for all garnishment types.",
+    "introContent": "California provides some of the strongest wage garnishment protections in the country. Under Code of Civil Procedure §706.050, revised by SB 1477 effective September 2023, a judgment creditor may take only the lesser of 20% of your disposable earnings or 40% of the amount by which your weekly disposable earnings exceed 48 times the California minimum wage. At the $16.90 state minimum wage, that shields the first $811.20 of weekly disposable pay entirely — and if you work where the local minimum wage is higher, that larger figure applies. The result is that many California wage earners have little or nothing that can be garnished for ordinary debts.",
     "keyProtections": [
-      "40x state minimum wage protected ($676/week) — far exceeds federal protection",
-      "Maximum garnishment is the lesser of 25% or amount exceeding 40x state minimum wage",
-      "Earnings Withholding Order required for most garnishments",
-      "Additional protections for low-income earners under state law"
+      "Only the lesser of 20% of disposable earnings or 40% of the amount above 48x the state minimum wage (CCP §706.050)",
+      "First $811.20/week of disposable earnings fully protected at the $16.90 state minimum wage",
+      "Local minimum wage applies where higher, protecting even more",
+      "Among the most protective wage garnishment laws in the nation"
     ],
-    "statuteReference": "California Code of Civil Procedure §706.050"
+    "statuteReference": "California Code of Civil Procedure §706.050",
+    "consumerDebtLimitText": "Lesser of 20% of disposable earnings or 40% of the amount above 48x the California minimum wage (CCP §706.050)"
   },
   "colorado": {
     "name": "Colorado",

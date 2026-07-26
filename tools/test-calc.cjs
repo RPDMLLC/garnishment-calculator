@@ -54,8 +54,15 @@ expect('TX child support (supporting, current, 50%)',
 expect('CA child support follows federal (single+arrears = 65%)',
   GCMath.calculate(S('california'), { ...base, type: 'child_support', supportsOtherFamily: false, inArrears: true }).max, 975);
 expect('Low income fully protected (AL $250/wk)', GCMath.calculate(S('alabama'), { gross: 250, frequency: 'weekly', type: 'consumer' }).max, 0);
-expect('CA consumer $2000 biweekly (40x state wage)', GCMath.calculate(S('california'), { ...base, type: 'consumer' }).max,
-  Math.max(0, Math.min(0.25 * 1500, 1500 - 40 * states['california'].stateMinimumWage * 2)));
+// CA CCP §706.050 (SB 1477): lesser of 20% disposable or 40% of the amount over 48x
+// state min wage. At $2000 biweekly, disposable $1500 < 48x$16.90x2 ($1622.40) → $0.
+expect('CA consumer $2000 biweekly (SB1477 48x floor fully protects)', GCMath.calculate(S('california'), { ...base, type: 'consumer' }).max,
+  Math.max(0, Math.min(0.20 * 1500, 0.40 * Math.max(0, 1500 - 48 * states['california'].stateMinimumWage * 2))));
+expect('CA consumer high income $6000 biweekly (SB1477 formula)', GCMath.calculate(S('california'), { gross: 6000, frequency: 'biweekly', type: 'consumer' }).max,
+  Math.max(0, Math.min(0.20 * 4500, 0.40 * Math.max(0, 4500 - 48 * states['california'].stateMinimumWage * 2))));
+// NY floor is 30x the GREATER of state/federal min wage ($17 → $510/wk), not federal $217.50.
+// A NY earner at $400/wk gross (disposable $300 < $510) is fully protected.
+expect('NY low income fully protected below 30x state min ($400/wk)', GCMath.calculate(S('new-york'), { gross: 400, frequency: 'weekly', type: 'consumer' }).max, 0);
 expect('PA consumer (prohibited)', GCMath.calculate(S('pennsylvania'), { ...base, type: 'consumer' }).max, 0);
 // MA c.246 §28: floor is 50x the GREATER of federal or MA min wage ($15) = $750/wk.
 // At $2000 biweekly, disposable $1500 = 50x$15x2 exactly, so nothing is garnishable.
