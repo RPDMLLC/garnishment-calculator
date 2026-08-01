@@ -77,6 +77,21 @@ expect('OH consumer (federal 25% / $217.50 - corrected)', GCMath.calculate(S('oh
 // OR ORS 18.385: flat statutory weekly floor $400 (as of 2026-07-01)
 expect('OR consumer (flat $400/wk statutory floor - corrected)', GCMath.calculate(S('oregon'), { ...base, type: 'consumer' }).max,
   Math.max(0, Math.min(0.25 * 1500, 1500 - 400 * 2)));
+// MN Debt Fairness Act (Minn. Stat. §571.922, eff. Oct 1 2024): graduated caps on
+// weekly disposable vs greater of state/federal min wage ($11.41 → 40x = $456.40,
+// 60x = $684.60, 80x = $912.80). Verified against revisor.mn.gov Aug 1, 2026.
+const mnW = Math.max(7.25, states['minnesota'].stateMinimumWage);
+expect('MN consumer fully protected at/below 40x ($600/wk gross, disposable $450)',
+  GCMath.calculate(S('minnesota'), { gross: 600, frequency: 'weekly', type: 'consumer' }).max, 0);
+expect('MN consumer 10% tier ($800/wk gross, disposable $600)',
+  GCMath.calculate(S('minnesota'), { gross: 800, frequency: 'weekly', type: 'consumer' }).max,
+  Math.min(0.10 * 600, 600 - 40 * mnW));
+expect('MN consumer 15% tier ($1200/wk gross, disposable $900)',
+  GCMath.calculate(S('minnesota'), { gross: 1200, frequency: 'weekly', type: 'consumer' }).max,
+  Math.min(0.15 * 900, 900 - 40 * mnW));
+expect('MN consumer 25% tier ($1600/wk gross, disposable $1200)',
+  GCMath.calculate(S('minnesota'), { gross: 1600, frequency: 'weekly', type: 'consumer' }).max,
+  Math.min(0.25 * 1200, 1200 - 40 * mnW));
 
 // Sanity: run every state, ensure no NaN / negative / over-disposable
 let stateSweep = 0;

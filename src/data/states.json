@@ -446,7 +446,7 @@
       "Court judgment required before garnishment",
       "Specific employer notification requirements"
     ],
-    "statuteReference": "Kentucky Revised Statutes §425.506"
+    "statuteReference": "Kentucky Revised Statutes §427.010"
   },
   "louisiana": {
     "name": "Louisiana",
@@ -473,7 +473,7 @@
       "Specific procedures for garnishment in Louisiana civil code",
       "Child support withholding capped at 50% of disposable earnings (La. R.S. 46:236.3)"
     ],
-    "statuteReference": "Louisiana Code of Civil Procedure Art. 2411",
+    "statuteReference": "Louisiana Revised Statutes §13:3881",
     "childSupportMaxPercent": 50
   },
   "maine": {
@@ -565,7 +565,7 @@
     "childSupportArrearsExtra": 5,
     "studentLoanPercent": 15,
     "taxLevyNote": "Michigan Department of Treasury can levy wages for state tax debts.",
-    "stateMinimumWage": 10.56,
+    "stateMinimumWage": 13.73,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
     "specialNotes": "Michigan follows federal CCPA limits for wage garnishment. The state does not provide additional protections beyond federal law. For child support, Michigan caps wage withholding at 50% of disposable earnings (MCL 552.608) — more protective than the federal maximum of up to 65%.",
@@ -596,13 +596,14 @@
     "stateMinimumWage": 11.41,
     "usesStateMinWage": true,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Minnesota protects 40 times the state minimum wage from garnishment, providing stronger protection than federal law.",
+    "specialNotes": "Minnesota's Debt Fairness Act (effective October 1, 2024) created a graduated garnishment scale. Weekly disposable earnings at or below 40 times the state minimum wage ($456.40) are fully protected; above that, creditors may take 10%, 15%, or 25% of disposable earnings depending on income, with tier thresholds at $684.60 (60x) and $912.80 (80x) per week.",
     "metaTitle": "Minnesota Wage Garnishment Calculator | MN Garnishment Laws & Limits",
-    "metaDescription": "Calculate how much of your Minnesota paycheck can be legally garnished. MN protects 40x state minimum wage. Free calculator for all garnishment types.",
-    "introContent": "Minnesota provides enhanced wage garnishment protections compared to federal law. The state protects 40 times the Minnesota minimum wage from garnishment. With the state minimum wage at $11.41 per hour, this means $456.40 per week is protected — more than double the federal protection of $217.50 per week.",
+    "metaDescription": "Calculate how much of your Minnesota paycheck can be legally garnished. MN's graduated scale takes 0-25% by income; first $456.40/week fully protected. Free calculator.",
+    "introContent": "Minnesota provides some of the strongest wage garnishment protections in the country. Under the Debt Fairness Act (Minnesota Statutes §571.922, effective October 1, 2024), garnishment is graduated by income: weekly disposable earnings at or below 40 times the state minimum wage — $456.40 at the current $11.41 per hour rate — are fully protected. Above that floor, creditors may take 10% of disposable earnings (up to $684.60 per week), 15% (up to $912.80 per week), or 25% (above $912.80 per week) — far more protective than the flat federal 25% rule.",
     "keyProtections": [
-      "40x state minimum wage protected ($456.40/week)",
-      "Stronger protection than federal CCPA baseline",
+      "Weekly disposable earnings up to $456.40 (40x state minimum wage) fully protected",
+      "Graduated caps: 10%, 15%, or 25% of disposable earnings depending on income",
+      "Tier thresholds at $684.60 (60x) and $912.80 (80x) per week",
       "Court judgment required for consumer debt garnishment",
       "Exemption claims can be filed within 14 days"
     ],
@@ -645,7 +646,7 @@
     "childSupportArrearsExtra": 5,
     "studentLoanPercent": 15,
     "taxLevyNote": "Missouri Department of Revenue can levy wages for state tax debts.",
-    "stateMinimumWage": 13.75,
+    "stateMinimumWage": 15,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": true,
     "specialNotes": "Missouri provides a head of household exemption. If you are the head of a family, you may be able to protect a greater portion of your wages from garnishment. Missouri limits garnishment to 25% of disposable earnings or 10% for head of household filers.",
@@ -671,7 +672,7 @@
     "childSupportArrearsExtra": 5,
     "studentLoanPercent": 15,
     "taxLevyNote": "Montana Department of Revenue can levy wages for state tax debts.",
-    "stateMinimumWage": 10.55,
+    "stateMinimumWage": 10.85,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
     "specialNotes": "Montana follows federal CCPA limits for wage garnishment. The state does not provide additional protections beyond federal law.",
