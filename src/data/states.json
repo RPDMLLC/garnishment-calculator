@@ -718,7 +718,7 @@
     "abbreviation": "NV",
     "slug": "nevada",
     "consumerDebtPercent": 25,
-    "consumerDebtMinimumWageMultiplier": 30,
+    "consumerDebtMinimumWageMultiplier": 50,
     "childSupportPercentCurrent": 50,
     "childSupportPercentSingle": 60,
     "childSupportArrearsExtra": 5,
@@ -727,17 +727,18 @@
     "stateMinimumWage": 12,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Nevada follows federal CCPA limits. The state has no income tax, which may result in higher disposable earnings. Nevada protects 82% of disposable earnings from garnishment (18% garnishable) for the first 30 days.",
+    "specialNotes": "Nevada uses an income-based cap (NRS 31.295): a creditor may take 18% of disposable earnings if your gross weekly wage is $770 or less, or 25% if it is above $770 — and never more than the amount by which disposable earnings exceed 50 times the federal minimum wage ($362.50/week). Nevada also has no state income tax.",
     "metaTitle": "Nevada Wage Garnishment Calculator | NV Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Nevada paycheck can be legally garnished. NV has no state income tax. Free calculator covers all garnishment types.",
     "introContent": "Nevada follows federal wage garnishment limits under the Consumer Credit Protection Act. The state has no income tax, which can result in higher disposable earnings and potentially higher garnishment amounts. Nevada law provides specific procedures for wage garnishment and requires creditors to obtain a court judgment before garnishing wages.",
     "keyProtections": [
-      "Federal CCPA limits apply: 25% of disposable earnings",
+      "18% of disposable earnings if gross weekly wage is $770 or less; 25% above that (NRS 31.295)",
+      "At least $362.50/week (50x federal minimum wage) protected",
       "No state income tax — higher disposable earnings",
-      "Court judgment required for consumer debt garnishment",
-      "Specific exemption claim procedures available"
+      "Court judgment required for consumer debt garnishment"
     ],
-    "statuteReference": "Nevada Revised Statutes §31.295"
+    "statuteReference": "Nevada Revised Statutes §31.295",
+    "consumerDebtLimitText": "18% of disposable earnings if gross weekly wage ≤ $770, otherwise 25%; never more than the amount above 50x the federal minimum wage (NRS 31.295)"
   },
   "new-hampshire": {
     "name": "New Hampshire",
@@ -1023,15 +1024,15 @@
     "stateMinimumWage": 14,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Rhode Island follows federal CCPA limits for wage garnishment. The state does not provide additional protections beyond federal law.",
+    "specialNotes": "Rhode Island follows the federal limits for ordinary consumer debt: the lesser of 25% of disposable earnings or the amount above $217.50/week. Important 2026 change: under a law effective January 1, 2026 (P.L. 2025 ch. 300/301), wage garnishment for MEDICAL-debt judgments is now fully prohibited in Rhode Island — medical debt cannot be collected from your wages at all.",
     "metaTitle": "Rhode Island Wage Garnishment Calculator | RI Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Rhode Island paycheck can be legally garnished. Free calculator covers child support, consumer debt, student loans, and tax levies under RI law.",
     "introContent": "Rhode Island follows the federal Consumer Credit Protection Act for wage garnishment limits. Creditors can garnish up to 25% of your disposable earnings or the amount by which your weekly disposable earnings exceed 30 times the federal minimum wage, whichever is less.",
     "keyProtections": [
-      "Federal CCPA limits apply: 25% of disposable earnings",
-      "30x federal minimum wage ($217.50/week) protected",
+      "Medical-debt judgments cannot be garnished at all (effective Jan 1, 2026)",
+      "Ordinary consumer debt: 25% of disposable or amount above $217.50/week",
       "Court judgment required before garnishment",
-      "Specific notice requirements for garnishment"
+      "30x federal minimum wage ($217.50/week) protected"
     ],
     "statuteReference": "Rhode Island General Laws §10-5-8"
   },
@@ -1175,8 +1176,8 @@
     "name": "Vermont",
     "abbreviation": "VT",
     "slug": "vermont",
-    "consumerDebtPercent": 25,
-    "consumerDebtMinimumWageMultiplier": 30,
+    "consumerDebtPercent": 15,
+    "consumerDebtMinimumWageMultiplier": 40,
     "childSupportPercentCurrent": 50,
     "childSupportPercentSingle": 60,
     "childSupportArrearsExtra": 5,
@@ -1185,17 +1186,18 @@
     "stateMinimumWage": 14.01,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Vermont follows federal CCPA limits. The state provides a minimum exemption of $217.50/week and limits garnishment to 25% of disposable earnings.",
+    "specialNotes": "For consumer credit debts, Vermont is more protective than federal law: a creditor may take only the lesser of 15% of disposable earnings or the amount by which weekly disposable earnings exceed 40 times the federal minimum wage ($290/week). (Non-consumer debts follow the federal 25% / $217.50 rule.)",
     "metaTitle": "Vermont Wage Garnishment Calculator | VT Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Vermont paycheck can be legally garnished. Free calculator covers child support, consumer debt, student loans, and tax levies under VT law.",
     "introContent": "Vermont follows the federal Consumer Credit Protection Act for wage garnishment limits. Creditors can garnish up to 25% of your disposable earnings or the amount by which your weekly disposable earnings exceed 30 times the federal minimum wage, whichever is less.",
     "keyProtections": [
-      "Federal CCPA limits apply: 25% of disposable earnings",
-      "30x federal minimum wage ($217.50/week) protected",
-      "Court judgment required before garnishment",
-      "Specific procedures for trustee process garnishment"
+      "Consumer credit debts capped at 15% of disposable earnings (12 V.S.A. §3170)",
+      "40x federal minimum wage ($290/week) protected for consumer debts",
+      "More protective than the federal 25% rule",
+      "Court judgment required before garnishment"
     ],
-    "statuteReference": "Vermont Statutes Title 12, §3170"
+    "statuteReference": "Vermont Statutes Title 12, §3170",
+    "consumerDebtLimitText": "Lesser of 15% of disposable earnings or the amount above 40x the federal minimum wage ($290/week), for consumer credit debts (12 V.S.A. §3170)"
   },
   "virginia": {
     "name": "Virginia",

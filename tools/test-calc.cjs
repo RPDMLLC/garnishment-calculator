@@ -64,6 +64,16 @@ expect('CA consumer high income $6000 biweekly (SB1477 formula)', GCMath.calcula
 // A NY earner at $400/wk gross (disposable $300 < $510) is fully protected.
 expect('NY low income fully protected below 30x state min ($400/wk)', GCMath.calculate(S('new-york'), { gross: 400, frequency: 'weekly', type: 'consumer' }).max, 0);
 expect('PA consumer (prohibited)', GCMath.calculate(S('pennsylvania'), { ...base, type: 'consumer' }).max, 0);
+// NV NRS 31.295: 18% if gross <= $770/wk, else 25%; floor 50x fed ($362.50/wk).
+// $2000 biweekly -> weekly gross $1000 > $770 -> 25% tier.
+expect('NV consumer high earner (gross >$770/wk -> 25%)', GCMath.calculate(S('nevada'), { ...base, type: 'consumer' }).max,
+  Math.max(0, Math.min(0.25 * 1500, 1500 - 50 * 7.25 * 2)));
+// $700/wk gross (<= $770) -> 18% tier; disposable $525.
+expect('NV consumer low earner (gross <=$770/wk -> 18%)', GCMath.calculate(S('nevada'), { gross: 700, frequency: 'weekly', type: 'consumer' }).max,
+  Math.max(0, Math.min(0.18 * 525, 525 - 50 * 7.25)));
+// VT 12 V.S.A. §3170 consumer: 15% of disposable / 40x fed ($290), not 25%/30x.
+expect('VT consumer (15% / 40x fed - corrected)', GCMath.calculate(S('vermont'), { ...base, type: 'consumer' }).max,
+  Math.max(0, Math.min(0.15 * 1500, 1500 - 40 * 7.25 * 2)));
 // MA c.246 §28: floor is 50x the GREATER of federal or MA min wage ($15) = $750/wk.
 // At $2000 biweekly, disposable $1500 = 50x$15x2 exactly, so nothing is garnishable.
 expect('MA consumer (15% gross vs 50x $15 state min - corrected)', GCMath.calculate(S('massachusetts'), { ...base, type: 'consumer' }).max,
