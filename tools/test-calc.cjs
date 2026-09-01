@@ -117,6 +117,41 @@ for (const slug of Object.keys(states)) {
 }
 console.log(`  PASS state sweep: ${stateSweep} combinations, all sane`);
 
+// ---------------------------------------------------------------------------
+// Head-of-family exemptions (consumer debt only). Verified 2026-09-01 against
+// Fla. Stat. § 222.11(2), Mo. Rev. Stat. § 525.030, Neb. Rev. Stat. § 25-1558.
+// ---------------------------------------------------------------------------
+const HOH = { headOfHousehold: true };
+
+// FL: disposable <= $750/wk is 100% exempt. $750/wk gross -> disposable $562.50.
+expect('FL head of family at $750/wk gross fully exempt (§222.11(2)(a))',
+  GCMath.calculate(S('florida'), { gross: 750, frequency: 'weekly', type: 'consumer', ...HOH }).max, 0);
+// FL: above the $750/wk disposable line, still exempt absent a signed waiver.
+expect('FL head of family high earner exempt absent written waiver (§222.11(2)(b))',
+  GCMath.calculate(S('florida'), { gross: 2000, frequency: 'weekly', type: 'consumer', ...HOH }).max, 0);
+// FL: unchecking the box must fall back to the plain CCPA result.
+expect('FL non-head-of-family unchanged (CCPA, §222.11(2)(c))',
+  GCMath.calculate(S('florida'), { gross: 750, frequency: 'weekly', type: 'consumer' }).max,
+  Math.min(0.25 * 562.5, 562.5 - 30 * 7.25));
+// FL: the exemption is consumer-debt only — child support must be untouched.
+expect('FL head of family does NOT reduce child support',
+  GCMath.calculate(S('florida'), { gross: 2000, frequency: 'weekly', type: 'child_support', ...HOH }).max,
+  GCMath.calculate(S('florida'), { gross: 2000, frequency: 'weekly', type: 'child_support' }).max);
+// MO: 10% head-of-family rate instead of 25%, 30x federal floor still applies.
+expect('MO head of family = 10% of disposable (§525.030)',
+  GCMath.calculate(S('missouri'), { gross: 1000, frequency: 'weekly', type: 'consumer', ...HOH }).max,
+  Math.min(0.10 * 750, 750 - 30 * 7.25));
+// NE: 15% head-of-family rate instead of 25%.
+expect('NE head of family = 15% of disposable (§25-1558)',
+  GCMath.calculate(S('nebraska'), { gross: 1000, frequency: 'weekly', type: 'consumer', ...HOH }).max,
+  Math.min(0.15 * 750, 750 - 30 * 7.25));
+// A state with no head-of-family exemption must ignore the flag entirely.
+expect('GA (no head-of-family exemption) ignores the flag',
+  GCMath.calculate(S('georgia'), { gross: 1000, frequency: 'weekly', type: 'consumer', ...HOH }).max,
+  GCMath.calculate(S('georgia'), { gross: 1000, frequency: 'weekly', type: 'consumer' }).max);
+// Iowa's flag was wrong (no head-of-family wage exemption in Iowa Code § 642.21).
+expect('IA has no head-of-family exemption flag', states['iowa'].headOfHouseholdProtection, false);
+
 // Golden-snapshot regression guard: every state x type x income value must still match
 // the verified baseline. Catches any formula change that silently alters a state.
 const snapshot = require('./snapshot.cjs');

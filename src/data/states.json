@@ -226,17 +226,22 @@
     "stateMinimumWage": 14,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": true,
-    "specialNotes": "Florida provides a powerful head of household exemption. If you qualify as head of household (providing more than 50% of support for a dependent), your wages are completely exempt from garnishment for consumer debts up to $750/week. Above that threshold, you must consent to garnishment.",
+    "specialNotes": "Florida has one of the strongest wage protections in the country. If you are the head of a family — you provide more than half the support for a child or other dependent — and your disposable earnings are $750 a week or less, all of those earnings are exempt from garnishment for consumer debts. Above $750 a week your earnings are still exempt unless you signed the separate written waiver Fla. Stat. §222.11(2)(b) requires; if you did sign one, federal CCPA limits apply to the excess.",
     "metaTitle": "Florida Wage Garnishment Calculator | FL Head of Household Exemption",
-    "metaDescription": "Calculate how much of your Florida paycheck can be legally garnished. FL's head of household exemption can protect 100% of your wages. Free calculator.",
-    "introContent": "Florida offers one of the strongest wage garnishment protections in the country through its head of household exemption. If you provide more than half the support for a child or other dependent, your wages may be completely exempt from garnishment for consumer debts if you earn $750 or less per week. Even above that threshold, a head of household must provide written consent for garnishment. Florida also has no state income tax, which affects disposable earnings calculations.",
+    "metaDescription": "Calculate how much of your Florida paycheck can be legally garnished. FL’s head of family exemption can protect 100% of your wages. Free calculator.",
+    "introContent": "Florida offers one of the strongest wage garnishment protections in the country through its head of family exemption. If you provide more than half the support for a child or other dependent and your disposable earnings are $750 a week or less, Fla. Stat. §222.11(2)(a) exempts all of those earnings from consumer-debt garnishment. If you earn more than $750 a week in disposable pay, your wages are still protected unless you signed the specific written waiver the statute requires — a separate document, in the same language as your contract, in at least 14-point type. Wages that are exempt stay exempt for six months after they are deposited in a bank account, as long as they can be traced. Anyone who is not a head of family is covered by the ordinary federal CCPA limits, and Florida has no state income tax, which raises disposable earnings.",
     "keyProtections": [
-      "Head of household exemption can protect 100% of wages up to $750/week",
-      "Above $750/week, head of household must consent to garnishment",
-      "No state income tax — higher disposable earnings",
-      "Federal CCPA limits apply for non-head-of-household filers"
+      "Head of family with disposable earnings of $750/week or less: 100% exempt (§222.11(2)(a))",
+      "Above $750/week, still exempt unless you signed the statutory written waiver",
+      "Exempt wages stay protected 6 months after deposit if traceable",
+      "Non-head-of-family filers get the standard federal CCPA limits"
     ],
-    "statuteReference": "Florida Statutes §222.11"
+    "statuteReference": "Florida Statutes §222.11",
+    "headOfHouseholdRule": {
+      "type": "fullExemptBelowWeekly",
+      "weeklyThreshold": 750,
+      "citation": "Fla. Stat. § 222.11(2)"
+    }
   },
   "georgia": {
     "name": "Georgia",
@@ -383,7 +388,7 @@
     "taxLevyNote": "Iowa Department of Revenue can levy wages for state tax debts.",
     "stateMinimumWage": 7.25,
     "usesStateMinWage": false,
-    "headOfHouseholdProtection": true,
+    "headOfHouseholdProtection": false,
     "specialNotes": "Iowa follows the federal weekly limit (25% of disposable, $217.50/week protected) but caps the total a creditor may garnish per calendar year by income tier — from $250/year (earning under $12,000) up to 10% of wages ($50,000+).",
     "metaTitle": "Iowa Wage Garnishment Calculator | IA Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Iowa paycheck can be legally garnished. IA caps the total garnished per year by income tier. Free calculator for all garnishment types.",
@@ -659,7 +664,12 @@
       "Significant protection for families",
       "Court judgment required before garnishment"
     ],
-    "statuteReference": "Missouri Revised Statutes §525.030"
+    "statuteReference": "Missouri Revised Statutes §525.030",
+    "headOfHouseholdRule": {
+      "type": "percent",
+      "percent": 10,
+      "citation": "Mo. Rev. Stat. § 525.030"
+    }
   },
   "montana": {
     "name": "Montana",
@@ -701,17 +711,22 @@
     "stateMinimumWage": 13.5,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": true,
-    "specialNotes": "Nebraska provides a head of household exemption. Head of household filers can protect a greater portion of their wages from garnishment.",
+    "specialNotes": "Nebraska provides a head of family exemption. If you actually support and maintain a dependent, a creditor may garnish only 15% of your disposable earnings for that week instead of the usual 25% (Neb. Rev. Stat. §25-1558). The federal floor still applies: nothing may be taken below 30x the federal minimum wage ($217.50/week).",
     "metaTitle": "Nebraska Wage Garnishment Calculator | NE Garnishment Laws & Limits",
-    "metaDescription": "Calculate how much of your Nebraska paycheck can be legally garnished. NE provides head of household protections. Free calculator for all garnishment types.",
-    "introContent": "Nebraska follows federal wage garnishment limits under the CCPA but provides additional protections for heads of household. If you provide more than 50% of the support for a dependent, you may qualify for enhanced wage protection under Nebraska law.",
+    "metaDescription": "Calculate how much of your Nebraska paycheck can be legally garnished. NE caps head-of-family garnishment at 15% of disposable earnings. Free calculator.",
+    "introContent": "Nebraska follows the federal CCPA garnishment ceiling of 25% of disposable earnings, but cuts that rate to 15% for a head of family — an individual who actually supports and maintains a dependent connected by blood, marriage, adoption, or guardianship (Neb. Rev. Stat. §25-1558). Either way, no garnishment may reach earnings below 30 times the federal minimum wage, which protects the first $217.50 of weekly disposable pay. The exemption is not automatic; you must claim it after you are served.",
     "keyProtections": [
-      "Federal CCPA limits apply as baseline",
-      "Head of household exemption available",
-      "Court judgment required before garnishment",
-      "Specific exemption claim procedures"
+      "Standard garnishment: 25% of disposable earnings",
+      "Head of family: only 15% of disposable earnings garnishable (§25-1558)",
+      "Federal floor protects the first $217.50 per week",
+      "You must claim the head-of-family exemption — it is not automatic"
     ],
-    "statuteReference": "Nebraska Revised Statutes §25-1558"
+    "statuteReference": "Nebraska Revised Statutes §25-1558",
+    "headOfHouseholdRule": {
+      "type": "percent",
+      "percent": 15,
+      "citation": "Neb. Rev. Stat. § 25-1558"
+    }
   },
   "nevada": {
     "name": "Nevada",
