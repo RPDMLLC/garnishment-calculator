@@ -223,7 +223,7 @@
     "childSupportArrearsExtra": 5,
     "studentLoanPercent": 15,
     "taxLevyNote": "Florida has no state income tax. Federal IRS levies use their own formula.",
-    "stateMinimumWage": 14,
+    "stateMinimumWage": 15,
     "usesStateMinWage": false,
     "headOfHouseholdProtection": true,
     "specialNotes": "Florida has one of the strongest wage protections in the country. If you are the head of a family — you provide more than half the support for a child or other dependent — and your disposable earnings are $750 a week or less, all of those earnings are exempt from garnishment for consumer debts. Above $750 a week your earnings are still exempt unless you signed the separate written waiver Fla. Stat. §222.11(2)(b) requires; if you did sign one, federal CCPA limits apply to the excess.",
@@ -320,7 +320,7 @@
       "Certain income sources are exempt from garnishment",
       "Child support withholding capped at 50% of disposable earnings (Idaho Code §32-1210)"
     ],
-    "statuteReference": "Idaho Code §11-717",
+    "statuteReference": "Idaho Code §11-207",
     "childSupportMaxPercent": 50
   },
   "illinois": {
@@ -495,12 +495,13 @@
     "stateMinimumWage": 15.1,
     "usesStateMinWage": true,
     "headOfHouseholdProtection": false,
-    "specialNotes": "Maine protects 40 times the state minimum wage from garnishment, providing stronger protection than federal law.",
+    "specialNotes": "Maine protects 40 times the state minimum wage from garnishment, providing stronger protection than federal law. Important 2026 change: under LD 2129 (Public Law ch. 649, effective July 29, 2026), wages can no longer be garnished at all for a MEDICAL-debt judgment in Maine (9-A M.R.S. §5-116-A(6)), and debt collectors may not even start a wage-garnishment action on medical debt.",
     "metaTitle": "Maine Wage Garnishment Calculator | ME Garnishment Laws & Limits",
     "metaDescription": "Calculate how much of your Maine paycheck can be legally garnished. ME protects 40x state minimum wage. Free calculator for all garnishment types.",
     "introContent": "Maine provides stronger wage garnishment protections than federal law by protecting 40 times the state minimum wage from garnishment. With Maine's minimum wage at $15.10 per hour, this means $604 per week is protected — significantly more than the federal protection of $217.50 per week.",
     "keyProtections": [
       "40x state minimum wage protected ($604/week)",
+      "Medical-debt judgments cannot be garnished at all (effective July 29, 2026)",
       "Stronger protection than federal CCPA baseline",
       "Court judgment required for consumer debt garnishment",
       "Specific exemption claim procedures available"
